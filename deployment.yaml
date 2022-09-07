@@ -1,0 +1,22 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravelapp-development
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: web
+      name: laravelapp-development
+  template:
+    metadata:
+      labels:
+        app: web
+        name: laravelapp-development
+    spec:
+      containers:
+        - name: laravelapp-development
+          image: sonnguyenep/laravelapp-development:latest
+          ports:
+            - containerPort: 80
