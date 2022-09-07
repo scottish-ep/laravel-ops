@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: laravelapp-development
-          image: sonnguyenep/laravelapp-development:1.0.19
+          image: sonnguyenep/laravelapp-development:1.0.20
           ports:
             - containerPort: 80
